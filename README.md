@@ -1,5 +1,4 @@
 # API de controle de dietas
-
 ### Regras da aplicação
 
 - [] Deve ser possível criar um usuário
