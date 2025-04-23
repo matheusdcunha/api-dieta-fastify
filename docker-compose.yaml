@@ -9,6 +9,6 @@ services:
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: api_dieta_db
     volumes:
-      - database:/bitnami/postgresql
+      - dieta_database:/bitnami/postgresql
 volumes:
-  database:
+  dieta_database:
