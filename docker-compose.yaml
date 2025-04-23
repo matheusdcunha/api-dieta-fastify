@@ -1,0 +1,14 @@
+services: 
+  postgres:
+    image: "bitnami/postgresql:latest"
+    container_name: api_dieta_db
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_DB: api_dieta_db
+    volumes:
+      - database:/bitnami/postgresql
+volumes:
+  database:
