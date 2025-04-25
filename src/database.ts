@@ -1,4 +1,4 @@
-import { knex as setupKnex, type Knex} from 'knex'
+import { knex as setupKnex, type Knex } from 'knex'
 import { env } from './env'
 
 export const config: Knex.Config = {
@@ -8,14 +8,16 @@ export const config: Knex.Config = {
     port: env.DB_PORT,
     user: env.DB_USER,
     database: env.DB_DATABASE,
-    password: env.DB_PASSWORD
+    password: env.DB_PASSWORD,
   },
-  migrations:{
-    extension:'ts',
-    directory: './src/database/migrations'
+  migrations: {
+    extension: 'ts',
+    directory: './database/migrations',
   },
-  pool:{
-    min:2,
-    max:10
-  }
+  pool: {
+    min: 2,
+    max: 10,
+  },
 }
+
+export const knex = setupKnex(config)
